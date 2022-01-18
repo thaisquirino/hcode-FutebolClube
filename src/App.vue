@@ -1,13 +1,20 @@
 <template>
-  <div id="app"></div>
+  <div id="app">
+    <HcodeHeader />
+  </div>
 </template>
 
 <script>
+import HcodeHeader from "./components/HcodeHeader.vue";
+
 export default {
   name: "App",
-  components: {},
+  components: {
+    HcodeHeader,
+  },
 };
 </script>
 
-<style>
+<style scoped>
+@import url("https://fonts.googleapis.com/css?family=Rajdhani&display=swap");
 </style>
