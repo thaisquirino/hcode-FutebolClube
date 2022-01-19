@@ -24,10 +24,10 @@ section {
   margin-top: 25px;
 }
 .container .row {
-  height: 300px;
+  height: 350px;
 }
-.container .row .col-5:first-chid {
-  background-color: rgba(0, 0, 0, 0.9);
+.container .row .col-5:first-child {
+  background-color: rgba(0, 0, 0, 0.5);
   background-image: url("../assets/football1.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
@@ -38,7 +38,7 @@ section {
 }
 h2 {
   margin: 25% 0;
-  color: RED;
+  color: #f6b64e;
   background-color: rgba(0, 0, 0, 0.4);
   padding: 10px;
 }
