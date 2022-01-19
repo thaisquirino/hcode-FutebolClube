@@ -27,8 +27,8 @@ section {
   height: 300px;
 }
 .container .row .col-5:first-chid {
-  background-color: rgba(0, 0, 0.5);
-  background-image: url("../assets/football.jpg");
+  background-color: rgba(0, 0, 0, 0.9);
+  background-image: url("../assets/football1.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -38,9 +38,12 @@ section {
 }
 h2 {
   margin: 25% 0;
-  color: #f6b64e;
-  background-color: rgba(0, 0, 0.4);
+  color: RED;
+  background-color: rgba(0, 0, 0, 0.4);
   padding: 10px;
+}
+.principal-news {
+  cursor: pointer;
 }
 </style>
 
