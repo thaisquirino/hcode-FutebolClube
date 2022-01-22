@@ -1,27 +1,44 @@
 <template>
   <div class="row">
     <div class="col-3">
-      <img src="../assets/news1 (1).jpg" alt="Noticia 1" />
+      <img :src="require('../assets/' + this.imgName)" :alt="imgInfo" />
     </div>
 
     <div class="col-9">
-      <h2>Começam os treinos para a nova Temporada</h2>
+      <h2>{{ newsTitle }}</h2>
 
       <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae mollitia
-        amet, perspiciatis sit quia laudantium ipsam at nesciunt? Sit magnam
-        eveniet, ad asperiores temporibus architecto excepturi accusamus
-        doloribus magni esse! Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Aperiam, eos aliquam maiores dolore repudiandae fugit vel eveniet
-        soluta corporis cum officia sint assumenda quis eligendi, praesentium
-        repellat, possimus id nulla.
+        {{ newsContent }}
       </p>
-      <span class="font-italic">19/01/2022</span>
+      <span class="font-italic">{{ newsDate }}</span>
     </div>
   </div>
 </template>
 <script>
-export default {};
+export default {
+  props: {
+    imgName: {
+      type: String,
+      required: true,
+    },
+    imgInfo: {
+      type: String,
+      required: true,
+    },
+    newsTitle: {
+      type: String,
+      required: true,
+    },
+    newsContent: {
+      type: String,
+      required: true,
+    },
+    newsDate: {
+      type: String,
+      required: true,
+    },
+  },
+};
 </script>
 <style  scoped>
 .row {
