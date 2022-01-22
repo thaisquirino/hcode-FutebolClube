@@ -4,7 +4,7 @@
       <nav class="navbar navbar-expand">
         <a href="#" class="link navbar-brand mr-auto">
           <img
-            src="./../assets/logo.svg"
+            src="./../assets/logo.jpg"
             alt="Hcode Treinamentos"
             class="img d-inline-block align-top"
             id="logo"
@@ -52,7 +52,7 @@ header {
   display: inline-flex;
 }
 .link {
-  color: #d48e23;
+  color: red;
   font-size: 30px;
   font-family: "Rajdhani";
 }

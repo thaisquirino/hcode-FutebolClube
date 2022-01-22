@@ -17,7 +17,7 @@
       <HcodeSectionNewsIndividual
         img-name="news2.jpg"
         img-info="Noticia 1"
-        news-title="Aqui treinos a todo  tempo"
+        news-title="Futebol Feminino faz coletiva no ninho  do urubu"
         news-content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae mollitia
         amet, perspiciatis sit quia laudantium ipsam at nesciunt? Sit magnam
         eveniet, ad asperiores temporibus architecto excepturi accusamus
@@ -56,6 +56,6 @@ export default {
 section {
   padding: 50px 0;
   margin-top: 25px;
-  background-color: #f37520;
+  background-color: rgb(141, 12, 12);
 }
 </style>
