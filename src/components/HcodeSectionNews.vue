@@ -7,9 +7,11 @@
         :img-name="notice.img"
         :img-info="notice.imgInfo"
         :news-title="notice.title"
-        :news-content="notice.content"
         :news-date="notice.date"
-      />
+      >
+       <p>{{notice.content | truncate(200) }}</p>
+      </HcodeSectionNewsIndividual>
+
     </div>
   </section>
 </template>
