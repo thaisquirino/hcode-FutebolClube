@@ -2,54 +2,55 @@
   <section>
     <div class="container">
       <HcodeSectionNewsIndividual
-        img-name="news1.jpg"
-        img-info="Noticia 1"
-        news-title="Começaram os treinos para a  nova temporada"
-        news-content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae mollitia
-        amet, perspiciatis sit quia laudantium ipsam at nesciunt? Sit magnam
-        eveniet, ad asperiores temporibus architecto excepturi accusamus
-        doloribus magni esse! Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Aperiam, eos aliquam maiores dolore repudiandae fugit vel eveniet
-        soluta corporis cum officia sint assumenda quis eligendi, praesentium
-        repellat, possimus id nulla."
-        news-date="19/01/2022"
-      />
-      <HcodeSectionNewsIndividual
-        img-name="news2.jpg"
-        img-info="Noticia 1"
-        news-title="Futebol Feminino faz coletiva no ninho  do urubu"
-        news-content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae mollitia
-        amet, perspiciatis sit quia laudantium ipsam at nesciunt? Sit magnam
-        eveniet, ad asperiores temporibus architecto excepturi accusamus
-        doloribus magni esse! Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Aperiam, eos aliquam maiores dolore repudiandae fugit vel eveniet
-        soluta corporis cum officia sint assumenda quis eligendi, praesentium
-        repellat, possimus id nulla."
-        news-date="19/01/2022"
-      />
-      <HcodeSectionNewsIndividual
-        img-name="news3.jpg"
-        img-info="Noticia 1"
-        news-title="E quando vamos pro campo ele fica pequeno"
-        news-content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae mollitia
-        amet, perspiciatis sit quia laudantium ipsam at nesciunt? Sit magnam
-        eveniet, ad asperiores temporibus architecto excepturi accusamus
-        doloribus magni esse! Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Aperiam, eos aliquam maiores dolore repudiandae fugit vel eveniet
-        soluta corporis cum officia sint assumenda quis eligendi, praesentium
-        repellat, possimus id nulla."
-        news-date="19/01/2022"
+        v-for="notice in news"
+        :key="notice.id"
+        :img-name="notice.img"
+        :img-info="notice.imgInfo"
+        :news-title="notice.title"
+        :news-content="notice.content"
+        :news-date="notice.date"
       />
     </div>
   </section>
 </template>
 <script>
-import HcodeSectionNewsIndividual from "./HcodeSectionNewsIndividual.vue";
+import HcodeSectionNewsIndividual from "./HcodeSectionNewsIndividual";
 export default {
   components: {
     HcodeSectionNewsIndividual,
   },
-};
+  data(){
+    return{
+      news:[]
+
+    }
+  },
+  created(){
+    this.news=[{
+      id:1,
+      title:"Começaram os treinos para a  nova temporada",
+      content:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae mollitiaamet, perspiciatis sit quia laudantium ipsam at nesciunt Sit magnameveniet, ad asperiores temporibus architecto excepturi accusamusdoloribus magni esse! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, eos aliquam maiores dolore repudiandae fugit vel evenietsoluta corporis cum officia sint assumenda quis eligendi, praesentiumrepellat, possimus id nulla.",
+        date:"2022-01-22",
+        img:"news1.jpg",
+        imgInfo:"Noticia 1"
+    }, {
+      id:2,
+      title:"Futebol Feminino faz coletiva no ninho  do urubu",
+      content:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae mollitiaamet, perspiciatis sit quia laudantium ipsam at nesciunt Sit magnameveniet, ad asperiores temporibus architecto excepturi accusamusdoloribus magni esse! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, eos aliquam maiores dolore repudiandae fugit vel evenietsoluta corporis cum officia sint assumenda quis eligendi, praesentiumrepellat, possimus id nulla.",
+        date:"2022-01-22",
+        img:"news2.jpg",
+        imgInfo:"Noticia 2"
+    }, {
+      id:3,
+      title:"E quando vamos pro campo ele fica pequeno",
+      content:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae mollitiaamet, perspiciatis sit quia laudantium ipsam at nesciunt Sit magnameveniet, ad asperiores temporibus architecto excepturi accusamusdoloribus magni esse! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, eos aliquam maiores dolore repudiandae fugit vel evenietsoluta corporis cum officia sint assumenda quis eligendi, praesentiumrepellat, possimus id nulla.",
+        date:"2022-01-22",
+        img:"news3.jpg",
+        imgInfo:"Noticia 3"
+    
+    }]
+  }
+}
 </script>
 
 <style  scoped>
