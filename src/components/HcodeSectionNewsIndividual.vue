@@ -5,8 +5,8 @@
     </div>
 
     <div class="col-9">
-      <h2>{{ newsTitle }}</h2>
-            
+      
+       <slot name="title"></slot>         
        <slot>Notícia Padrão</slot>
           
       <span class="font-italic">{{ newsDate }}</span>
@@ -24,10 +24,6 @@ export default {
       type: String,
       required: true,
     },
-    newsTitle: {
-      type: String,
-      required: true,
-    },
     newsDate: {
       type: String,
       required: true,
@@ -35,6 +31,7 @@ export default {
   },
 };
 </script>
+
 <style  scoped>
 .row {
   margin-bottom: 30px;
