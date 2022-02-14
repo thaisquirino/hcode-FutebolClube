@@ -8,14 +8,15 @@
         :img-name="notice.img"
         :img-info="notice.imgInfo"
         :news-date="notice.date"
+        
       >
-         <template v-slot:title>
-            <h2>{{ notice.title }}</h2>
-         </template>
-          
-         <p>{{notice.content | truncate(200) }}</p>
+       <template v-slot:title>
+         <h2>{{notice.title}}</h2>
+       </template>    
 
+        <p>{{notice.content| truncate(200)}}</p>
       </HcodeSectionNewsIndividual>
+
 
     </div>
   </section>
