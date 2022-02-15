@@ -1,7 +1,11 @@
 <template>
   <div id="app">
-    <HcodeHeader @select-championship="changeChampionship" />
-    <HcodeSection :championship="championship" />
+    <HcodeHeader @select-championship="changeChampionship" 
+     @change-component="changeComponent"
+    />
+    <HcodeSection :championship="championship" 
+    :currentComponent="currentSectionComponent"
+    />
     <HcodeFooter />
   </div>
 </template>
@@ -21,14 +25,30 @@ export default {
   data() {
     return {
       championship: "Campeonato Brasileiro",
+      currentSectionComponent:'HcodeSectionBanner'
     };
   },
   methods: {
     changeChampionship(value) {
       this.championship = value;
     },
-  },
-};
+    changeComponent(value) {
+      let component;
+
+      switch (value) { 
+      case 'home':
+      default:
+       component= 'HcodeSectionBanner';
+       break;
+
+       case 'news':
+         component='HcodeSectionNews'
+         break;
+       }
+       this.currentSectionComponent=component;
+   }
+  }
+}
 </script>
 
 <style scoped>
