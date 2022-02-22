@@ -66,5 +66,6 @@ section {
   padding: 50px 0;
   margin-top: 25px;
   background-color: rgb(141, 12, 12);
+  color: #696969;
 }
 </style>

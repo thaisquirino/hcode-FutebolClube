@@ -9,7 +9,6 @@
             class="img d-inline-block align-top"
             id="logo"
           />
-
           Futebol Clube
         </a>
         <div class="links mr-2">
