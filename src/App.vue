@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <HcodeHeader @select-championship="changeChampionship" 
+    <HcodeHeader
+     @select-championship="changeChampionship" 
      @change-component="changeComponent"
     />
     <HcodeSection :championship="championship" 
@@ -14,6 +15,7 @@
 import HcodeHeader from "./components/HcodeHeader.vue";
 import HcodeFooter from "./components/HcodeFooter.vue";
 import HcodeSection from "./components/HcodeSection.vue";
+import {mapMutations} from 'vuex'
 
 export default {
   name: "App",
@@ -28,9 +30,9 @@ export default {
     };
   },
   methods: {
-    changeChampionship(value) {
-      this.championship = value;
-    },
+    ...mapMutations({
+        changeChampionship:'setChampionship'
+    }),
     changeComponent(value) {
       let component;
 
