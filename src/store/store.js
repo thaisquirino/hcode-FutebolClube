@@ -55,7 +55,7 @@ export default new Vuex.Store({
         changeChampionship(context, value) {
             context.commit('setChampionship', value); 
         },
-        updateClubeName(context, value) {
+        updateClubName(context, value) {
             context.commit('setClubName', value);
         }
     }

@@ -2,9 +2,9 @@
   <input
     type="text"
     :value="clubName"
-    @keyup="updateclubName($event.target.value)" class="form-control"
-    placeholder="Digite seu clube"
-  />
+    @keyup="updateClubName($event.target.value)" class="form-control"
+    placeholder="Digite seu clube">
+  
 </template>
 
 <script>
@@ -12,9 +12,9 @@ import {mapGetters,mapActions} from 'vuex'
 
 export default {
   computed:mapGetters({
-    ClubName:'getClubName'
+    clubName:'getClubName'
     }),
-  methods:mapActions(['updateclubName'])
+  methods:mapActions(['updateClubName'])
 }
 </script>
 <style scoped>
