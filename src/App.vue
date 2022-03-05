@@ -4,9 +4,7 @@
      @select-championship="changeChampionship" 
      @change-component="changeComponent"
     />
-    <HcodeSection 
-    :current-component="currentSectionComponent"
-    />
+    <HcodeSection />
     <HcodeFooter />
   </div>
 </template>
@@ -15,7 +13,7 @@
 import HcodeHeader from "./components/HcodeHeader.vue";
 import HcodeFooter from "./components/HcodeFooter.vue";
 import HcodeSection from "./components/HcodeSection.vue";
- import {mapActions} from 'vuex'
+import {mapActions} from "vuex"
 
 export default {
   name: "App",
@@ -26,7 +24,6 @@ export default {
   },
   data() {
     return {
-      currentSectionComponent:'HcodeSectionBanner'
     };
   },
   methods: {
