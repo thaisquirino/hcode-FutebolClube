@@ -10,14 +10,11 @@
         :news-date="notice.date"
         
       >
-       <template v-slot:title>
-         <h2 @click="goToPage(`/news/${notice.id}`)">{{notice.title}}</h2>
+       <template #title>
+         <router-link :to="{name:'notice',params:{idnotice:notice.id}}" tag="h2">{{notice.title}} </router-link>
        </template>    
-
         <p>{{notice.content| truncate(200)}}</p>
       </HcodeSectionNewsIndividual>
-
-
     </div>
   </section>
 </template>
@@ -39,10 +36,7 @@ export default {
       })
   },
   methods:{
-    goToPage(page) {
-      this.$router.push(page);
-
-    }
+    
   }
 }
 </script>
