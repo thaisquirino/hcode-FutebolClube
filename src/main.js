@@ -10,6 +10,14 @@ Vue.use(Vue2Filters)
 
 Vue.config.productionTip = false
 
+router.beforeEach((to, from, next) => {
+  console.log(to, from)
+  next();
+});
+router.afterEach(() => {
+  console.log('Renderização ok')
+})
+
 new Vue({
   render: h => h(App),
   store,
