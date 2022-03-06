@@ -13,8 +13,8 @@
         </a>
         <div class="links mr-2">
               
-           <router-link active-class="link-active" to="/" class= "btn mr-5" >Inicio</router-link>
-           <router-link  active-class="link-active"  to="/news" class= "btn mr-5"> Noticias </router-link>
+           <router-link to="/" class= "btn mr-5" >Inicio</router-link>
+           <router-link to="/news" class= "btn mr-5"> Noticias </router-link>
 
           
           <a href="#" class="btn mr-5">Classificações</a>
