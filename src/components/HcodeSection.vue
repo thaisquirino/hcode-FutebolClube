@@ -5,8 +5,9 @@
         <h3>Você está vendo notícias do :{{ championship }}</h3>
       </div>
     </div>
-
+        <transition name="fade-view" mode="out-in">
       <router-view></router-view>
+        </transition>
 
   
     <div class="container">
@@ -50,4 +51,10 @@ export default {
 </script>
 
 <style scoped>
+.fade-view-enter, .fade-view-leaver-to{
+  opacity: 0;
+}
+.fade-view-enter-active, .fade-view-leave-active{
+ transition: opacity .5s ease-in-out ;
+}
 </style>

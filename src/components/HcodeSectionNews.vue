@@ -43,9 +43,9 @@ export default {
 
 <style>
 .section-news {
-  padding: 50px 0;
+  padding: 50px 50px;
   margin-top: 25px;
   background-color: rgb(141, 12, 12);
-  color: #696969;
+  color: #968b8b;
 }
 </style>
