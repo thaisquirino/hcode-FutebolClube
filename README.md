@@ -1,5 +1,6 @@
 # hcode-futebolclube
 
+Colando em pratica conceitos básicos e avançados do Vue.js 
 ## Project setup
 ```
 yarn install
